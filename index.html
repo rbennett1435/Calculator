@@ -4,117 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript - Hello DOM - Benchmark 2</title>
-    <style>
-      :root {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 18px;
-        line-height: 1.5;
-      }
-
-      body {
-        padding: 2rem;
-        max-width: 50rem;
-        margin: auto;
-      }
-
-      code {
-        background: lightgrey;
-        font-size: 0.9rem;
-      }
-
-      .locks {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .lock * {
-        margin: 0;
-        padding: 0;
-      }
-
-      .lock {
-        display: inline-flex;
-        flex-direction: column;
-        gap: 0.25rem;
-        font-size: 1rem;
-        padding: 0.5rem;
-        background: #ddd;
-        border-radius: 0.5em;
-        border: 2px solid #bbb;
-      }
-
-      .lock__status {
-        text-align: center;
-        font-family: "Courier New", Courier, monospace;
-        font-weight: bold;
-        font-size: 1.1em;
-        background: #222;
-        color: #ddd;
-        border-radius: 5%;
-        padding: 0 0.5rem;
-        min-width: 8rem;
-      }
-
-      .num_pad {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.15rem;
-      }
-
-      .calculator_key[data-key="0"] {
-        grid-column: 2;
-      }
-
-      .enter_key {
-        grid-column: span 3;
-      }
-
-      .lock__reset--admin {
-        background: rgb(255, 0, 0);
-        color: white;
-        padding: 0.25em;
-        border-radius: 0.2em;
-        border: none;
-        font-weight: bold;
-      }
-    </style>
-    <script src="KeyCodeDoorLock.js" defer></script>
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>JavaScript - Hello DOM - Benchmark 2</h1>
-    <p>
-      Your job for this benchmark is to write the JavaScript required to connect
-      the provided HTML and CSS to the provided implementation of a key code
-      door lock.
-    </p>
-    <div class="locks">
-      <div class="lock" data-answer="8675309">
-        <p class="lock__status">LOCKED</p>
-        <div class="num_pad">
-          <button class="calculator_key" data-key="1">1</button>
-          <button class="calculator_key" data-key="2">2</button>
-          <button class="calculator_key" data-key="3">3</button>
-          <button class="calculator_key" data-key="4">4</button>
-          <button class="calculator_key" data-key="5">5</button>
-          <button class="calculator_key" data-key="6">6</button>
-          <button class="calculator_key" data-key="7">7</button>
-          <button class="calculator_key" data-key="8">8</button>
-          <button class="calculator_key" data-key="9">9</button>
-          <button class="calculator_key" data-key="0">0</button>
-          <button class="enter_key">RESET</button>
-          <button
-            class="lock__reset lock__reset--admin"
-            data-reset-admin="true"
-          >
-            ADMIN RESET
-          </button>
-        </div>
-      </div>
+    <div class="output">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
     </div>
-
+    <div class="calculator-grid">
+      <button data-all-clear class="span-two">AC</button>
+      <button data-delete>DEL</button>
+      <button data-operation>√</button>
+      <button data-operation>÷</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>⌃</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>+</button>
+      <button data-operation>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>-</button>
+      <button data-number>0</button>
+      <button data-number>.</button>
+      <button data-operation>π</button>
+      <button data-operation>*</button>
+      <button data-equals class="span-two">=</button>
+    </div>
   </body>
 </html>
