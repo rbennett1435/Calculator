@@ -57,6 +57,7 @@ class Calculator {
       case "π":
         computation = prev * Math.PI * current;
         break;
+
       default:
         return;
     }

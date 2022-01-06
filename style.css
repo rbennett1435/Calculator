@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(to right, #090979, #00d4ff);
+  background: linear-gradient(to left, #5d5dd4, #00d4ff);
   /* background-image: url("https://previews.123rf.com/images/audiohead/audiohead1205/audiohead120500070/13706436-abstract-background-red-binary-code-on-black-screen.jpg"); */
 }
 
@@ -22,10 +22,11 @@ body {
 .calculator-grid > button {
   cursor: pointer;
   font-size: 2rem;
-  border: 1px ridge rgb(11, 230, 238);
+  border: 1px outset rgb(11, 230, 238);
   outline: none;
   background-color: white;
   padding: 5px;
+  color: rgb(5, 5, 75);
 }
 
 /* .calculator-grid > button:hover {
@@ -42,7 +43,7 @@ body {
   display: flex;
   width: 500px;
   /* width */
-  color: green;
+  color: rgb(55, 27, 218);
   border: solid 5px white;
   align-items: flex-start;
   justify-content: space-around;
@@ -54,12 +55,12 @@ body {
 }
 
 .output .previous-operand {
-  color: green;
+  color: rgb(32, 17, 168);
   font-size: 1.5rem;
 }
 
 .output .current-operand {
-  color: green;
+  color: rgb(26, 51, 192);
   font-size: 2.5rem;
 }
 
