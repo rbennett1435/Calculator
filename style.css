@@ -2,7 +2,6 @@ body {
   padding: 0;
   margin: 0;
   background: linear-gradient(to left, #5d5dd4, #00d4ff);
-  /* background-image: url("https://previews.123rf.com/images/audiohead/audiohead1205/audiohead120500070/13706436-abstract-background-red-binary-code-on-black-screen.jpg"); */
 }
 
 .calculator-grid {
@@ -27,11 +26,12 @@ body {
   background-color: white;
   padding: 5px;
   color: rgb(5, 5, 75);
+  /* border-radius: 10%; */
 }
 
-/* .calculator-grid > button:hover {
+.calculator-grid > button:hover {
   background-color: rgba(255, 255, 255, 0.9);
-} */
+}
 
 /* .span-two {
   grid-column: span 2;
